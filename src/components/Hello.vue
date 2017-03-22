@@ -1,22 +1,22 @@
 <template>
 
-<md-layout md-gutter >
+<md-layout md-gutter class="phone-viewport">
     <!-- show the events-->
-  <md-layout md-column md-gutter>
-            <md-layout md-column md-gutter class="md-primary">
-              <span class="md-title">List of stories</span>
-            </md-layout>
+            <md-layout md-column class="md-accent" md-flex-large="100">
+              List of stories
+            </md-layout>      
 
-    <md-layout md-column md-gutter class="md-primary" >
-              <md-card v-for="event in events" md-flex="20">
+    <div class="card-holder" md-column >
+              <span style="flex: 1"></span>
+              <md-card md-flex-large="150" v-for="event in events">
                 <md-card-media > 
                   <img v-bind:src="event.image"/>
                 </md-card-media>
 
                 <md-card-header>
-                  <div class="md-title"><h2>{{ event.Titre }}</h2></div>
-                  <div class="md-subhead"><h4 class="glyphicon glyphicon-calendar">Auteur : {{ event.Auteur }}</h4> </div>
-                  <div class="md-subhead"> <h5 class="list-group-item-text" >Genre : {{ event.genre }}</h5></div>
+                  <h2>{{ event.Titre }}</h2>
+                  <h4 class="glyphicon glyphicon-calendar">Auteur : {{ event.Auteur }}</h4>
+                  <h5 class="list-group-item-text" >Genre : {{ event.genre }}</h5>
                 </md-card-header>
               
                 <md-card-expand>
@@ -36,9 +36,10 @@
                   </md-card-content>
                 </md-card-expand>
           </md-card>
-        </md-layout>
+
+          
+        </div>
     </md-layout>
-</md-layout>
 
 </template>
 
@@ -90,6 +91,54 @@ export default {
             Synopsis: "Harry arrive à l’école des sorciers",
             image: "https://placeimg.com/380/380/nature"
           },
+          {
+            id:'4',
+            Titre: "Harry Potter",
+            genre: "Fiction",
+            Auteur: "Jk Rolling",
+            DateCreation: "2012-04-23T18:25:43.511Z",
+            DateModification: "2012-04-23T18:25:43.511Z",
+            DatePublication: "2012-04-23T18:25:43.511Z",
+            Note: 2,
+            Synopsis: "Harry arrive à l’école des sorciers",
+            image: "https://placeimg.com/380/380/animals"
+          },
+          {
+          id:'5',
+            Titre: "La belle et la bette",
+            genre: "Fiction",
+            Auteur: "Luc Besson",
+            DateCreation: "2012-04-23T18:25:43.511Z",
+            DateModification: "2012-04-23T18:25:43.511Z",
+            DatePublication: "2012-04-23T18:25:43.511Z",
+            Note: 2,
+            Synopsis: "Harry arrive à l’école des sorciers",
+            image: "https://placeimg.com/380/380/animals"
+          },
+          {
+          id:'6',
+            Titre: "King Kong",
+            genre: "Fiction",
+            Auteur: "Maggie Reagan",
+            DateCreation: "2012-04-23T18:25:43.511Z",
+            DateModification: "2012-04-23T18:25:43.511Z",
+            DatePublication: "2012-04-23T18:25:43.511Z",
+            Note: 2,
+            Synopsis: "Harry arrive à l’école des sorciers",
+            image: "https://placeimg.com/380/380/animals"
+          },
+          {
+          id:'6',
+            Titre: "King Kong",
+            genre: "Fiction",
+            Auteur: "Maggie Reagan",
+            DateCreation: "2012-04-23T18:25:43.511Z",
+            DateModification: "2012-04-23T18:25:43.511Z",
+            DatePublication: "2012-04-23T18:25:43.511Z",
+            Note: 2,
+            Synopsis: "Harry arrive à l’école des sorciers",
+            image: "https://placeimg.com/380/380/animals"
+          }
     ]
 
     }
