@@ -7,7 +7,7 @@
             <h1 class="md-title">{{msg}}</h1>
           </md-toolbar> 
    
-          <div class="card-holder" md-column>  
+          <div class="card-holder">  
               
               <md-card v-for="event in events" md-flex="40">
                 <md-card-media > 
