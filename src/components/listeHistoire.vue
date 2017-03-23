@@ -1,25 +1,29 @@
 <template>
 
-<md-layout md-gutter class="phone-viewport">
+<md-layout md-gutter>
     <!-- show the events-->
-            <md-layout md-column class="md-accent" md-flex-large="100">
-              List of stories
-            </md-layout>      
-
-    <div class="card-holder" md-column >
-              <span style="flex: 1"></span>
-              <md-card md-flex-large="150" v-for="event in events">
+      <div  md-gutter >        
+          <md-toolbar md-column class="md-accent" md-flex-large="100" md-flex="40">
+            <h1 class="md-title">{{msg}}</h1>
+          </md-toolbar> 
+   
+          <div class="card-holder" md-column>  
+              
+              <md-card v-for="event in events" md-flex="40">
                 <md-card-media > 
-                  <img v-bind:src="event.image"/>
+                  </md-avatar class="md-large">
+                    <img v-bind:src="event.image"></img>
+                  </md-avatar>
                 </md-card-media>
 
                 <md-card-header>
+                
                   <h2>{{ event.Titre }}</h2>
                   <h4 class="glyphicon glyphicon-calendar">Auteur : {{ event.Auteur }}</h4>
                   <h5 class="list-group-item-text" >Genre : {{ event.genre }}</h5>
                 </md-card-header>
               
-                <md-card-expand>
+                <md-card-expand >
                   <md-card-actions>
                     <md-button >Lire</md-button>
                     <span style="flex: 1"></span>
@@ -35,7 +39,8 @@
                     Abstract : {{ event.Synopsis }}
                   </md-card-content>
                 </md-card-expand>
-          </md-card>
+            </md-card>
+      </div>  
 
           
         </div>
@@ -43,12 +48,24 @@
 
 </template>
 
+<style scoped>
+.md-card{
+  width: 60%;
+}
+.md-card-media{
+  width: 100%;
+}
+
+
+</style>
+
+
 <script>
 export default {
   name:'hello',
   data () {
     return {
-      msg: 'Add an Event',
+      msg: 'List of stories',
 
         event: { Titre: '', Synopsis: '', Auteur: '', Note: '', genre:'', image:'', id:'' },
         
@@ -63,7 +80,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 2,
             Synopsis: "Harry arrive à l’école des sorciers",
-            image: "https://placeimg.com/380/380/animals"
+            image: "https://placeimg.com/430/250/animals"
           },
 
             {
@@ -76,7 +93,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 3,
             Synopsis: "After “borrowing” her mother-in-law’s credit card to escape some trouble hangs out on the Disneyesque Chips Ahoy television-show set.",
-            image: "https://placeimg.com/380/380/animals"
+            image: "https://placeimg.com/430/250/animals"
           },
 
             {
@@ -89,7 +106,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 4,
             Synopsis: "Harry arrive à l’école des sorciers",
-            image: "https://placeimg.com/380/380/nature"
+            image: "https://placeimg.com/430/250/nature"
           },
           {
             id:'4',
@@ -101,7 +118,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 2,
             Synopsis: "Harry arrive à l’école des sorciers",
-            image: "https://placeimg.com/380/380/animals"
+            image: "https://placeimg.com/430/250/animals"
           },
           {
           id:'5',
@@ -113,7 +130,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 2,
             Synopsis: "Harry arrive à l’école des sorciers",
-            image: "https://placeimg.com/380/380/animals"
+            image: "https://placeimg.com/430/250/animals"
           },
           {
           id:'6',
@@ -125,7 +142,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 2,
             Synopsis: "Harry arrive à l’école des sorciers",
-            image: "https://placeimg.com/380/380/animals"
+            image: "https://placeimg.com/430/250/animals"
           },
           {
           id:'6',
@@ -137,7 +154,7 @@ export default {
             DatePublication: "2012-04-23T18:25:43.511Z",
             Note: 2,
             Synopsis: "Harry arrive à l’école des sorciers",
-            image: "https://placeimg.com/380/380/animals"
+            image: "https://placeimg.com/430/250/animals"
           }
     ]
 

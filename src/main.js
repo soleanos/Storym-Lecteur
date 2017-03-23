@@ -12,7 +12,7 @@ Vue.material.registerTheme({
       color: 'blue',
       hue: 700
     },
-    accent: 'red'
+    accent: 'purple'
   },
   teal: {
     primary: 'blue',
