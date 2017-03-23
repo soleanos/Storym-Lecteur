@@ -29,20 +29,20 @@ Vue.config.productionTip = false;
 
 
 
-new Vue({
-  el: '#nav',
-  methods: {
-    toggleLeftSidenav() {
-      this.$refs.leftSidenav.toggle();
-    },
-    openDialog(ref) {
-      this.$refs[ref].open();
-    },
-    closeDialog(ref) {
-      this.$refs[ref].close();
-    },
-  }
-})
+// new Vue({
+//   el: '#nav',
+//   methods: {
+//     toggleLeftSidenav() {
+//       this.$refs.leftSidenav.toggle();
+//     },
+//     openDialog(ref) {
+//       this.$refs[ref].open();
+//     },
+//     closeDialog(ref) {
+//       this.$refs[ref].close();
+//     },
+//   }
+// })
 
 new Vue({
   el: '#main',
